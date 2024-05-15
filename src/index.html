@@ -1,140 +1,168 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Registeration Form</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/9f2f1fcf1c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style.css">
-   
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registeration Form</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/9f2f1fcf1c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+
 
 </head>
-<body>
-<div id="title1">
 
-  <nav class="navbar navbar-expand-lg nv">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">AH Hospital</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#social-icons">Contact</a>
-          </li>          
-        </ul>
+<body>
+  <div id="title1">
+
+    <nav class="navbar navbar-expand-lg nv">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">AH Hospital</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#social-icons">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+
+
+
+  <div class="registration-form">
+    <form id="registration-form">
+      <h2>Patient Registeration Form</h2>
+      <hr>
+      <div class="form-icon">
+        <span><i class="fa-solid fa-briefcase-medical"></i></span>
+      </div>
+      <div class="form-group">
+        <input type="text" id="username" class="form-control item" id="username" placeholder="Name Of Patient" max="18"
+          required>
+      </div>
+      <div class="row row-cols-lg-2">
+        <div class="form-group">
+          <select class="form-control-item form-select gender " id="gender">
+            <option value="none">Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group  ">
+          <input type="text" class="form-control item  " id="email" placeholder="Email" required>
+        </div>
+        <div class="form-group ">
+          <input type="number" class="form-control item" id="phone-number" placeholder="Phone Number" required>
+        </div>
+        <div class="form-group">
+          <input type="date" class="form-control item" id="birth-date" placeholder="Birth Date">
+        </div>
+      </div>
+      <div class="form-group  ">
+        <label for="discription">DISEASE DESCRIPTION</label>
+        <textarea class="form-control item" name="DISEASE DISCRIPTION" id="discription" cols="58" rows="5"></textarea>
+      </div>
+
+      <div class="form-group ">
+        <button type="submit" class="btn btn-block create-account" id="submit">SUBMIT</button>
+      </div>
+    </form>
+    <div class="social-media">
+      <h5>Contact us</h5>
+      <div id="social-icons" class="social-icons">
+        <a href="#"><i class="fa-solid fa-location-dot"></i></a>
+        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        <a href="#"><i class="fa-solid fa-phone"></i></a>
+        <br><br>
+        <p>@Copyright 2024</p>
       </div>
     </div>
-  </nav>
-
-</div>
+  </div>
 
 
 
-    <div class="registration-form">
-        <form id="registration-form">
-          <h2>Patient Registeration Form</h2>
-          <hr>
-            <div class="form-icon">
-                <span><i class="fa-solid fa-briefcase-medical"></i></span>
-            </div>
-            <div class="form-group">
-                <input type="text" id="username" class="form-control item" id="username" placeholder="Name Of Patient" max="18" required>
-            </div> 
-            <div class="form-group" >
-            <select class="form-control-item form-select gender"id="gender" >
-                <option selected>Gender</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option>
-            </select>
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="email" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-                <input type="number" class="form-control item" id="phone-number" placeholder="Phone Number" required>
-            </div>
-            <div class="form-group">
-                <input type="date" class="form-control item" id="birth-date" placeholder="Birth Date">
-            </div>            
-            <div class="form-group">
-                <input type="text textfield" class="form-control item" id="discription" placeholder="DISEASE DISCRIPTION" required>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-block create-account"    id="submit">SUBMIT</button>
-            </div>
-        </form>
-        <div class="social-media">
-            <h5>Contact us</h5>
-            <div id="social-icons"class="social-icons">
-                <a href="#"><i class="fa-solid fa-location-dot"></i></a>
-                <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                <a href="#"><i class="fa-solid fa-phone"></i></a>
-                <br><br>
-                <p>@Copyright 2024</p>
-            </div>
-        </div>
+  <div class="toast align-items-center text-white bg-danger" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        <strong id="errorMessage"></strong>
+      </div>
+      <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
-   
+  </div>
 
 
 
 
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+    import { getDatabase, ref, push, child, get } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
 
-<script type="module" >
-       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-       import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
-        import { getDatabase, ref, push, child,  get } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
-       
-       const firebaseConfig = {
-         apiKey: "AIzaSyB-Fp38c9GUdO6AekTpdKhwtd6IHg6v-Ns",
-         authDomain: "patient-detail-cb679.firebaseapp.com",
-         databaseURL: "https://patient-detail-cb679-default-rtdb.firebaseio.com",
-         projectId: "patient-detail-cb679",
-         storageBucket: "patient-detail-cb679.appspot.com",
-         messagingSenderId: "429925058854",
-         appId: "1:429925058854:web:03af403cf4a869825559e7",
-         measurementId: "G-LLKGNSZ2H5"
-       };
-     
-        
-       const app = initializeApp(firebaseConfig);
-       const analytics = getAnalytics(app);
-       const database = getDatabase(app);
-     
-        
-       document.getElementById("registration-form").addEventListener("submit", function(event) {
-         event.preventDefault();  
-     
-         
-         const formData = {
-           name: document.getElementById("username").value,
-           gender: document.getElementById("gender").value,
-           email: document.getElementById("email").value,
-           phoneNumber: document.getElementById("phone-number").value,
-           birthDate: document.getElementById("birth-date").value, 
-           diseaseDescription: document.getElementById("discription").value
-         };
-      
-         push(ref(database, 'patients'), formData)
-           .then(() => {
-             console.log('Data successfully submitted to Firebase');
-             alert('Your data has been successfully submitted!');
-              
-           })
-           .catch((error) => {
-             console.error('Error submitting data to Firebase: ', error);
-             
-           });
-       });
-</script>
-  
+    const firebaseConfig = {
+      apiKey: "AIzaSyB-Fp38c9GUdO6AekTpdKhwtd6IHg6v-Ns",
+      authDomain: "patient-detail-cb679.firebaseapp.com",
+      databaseURL: "https://patient-detail-cb679-default-rtdb.firebaseio.com",
+      projectId: "patient-detail-cb679",
+      storageBucket: "patient-detail-cb679.appspot.com",
+      messagingSenderId: "429925058854",
+      appId: "1:429925058854:web:03af403cf4a869825559e7",
+      measurementId: "G-LLKGNSZ2H5"
+    };
+
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const database = getDatabase(app);
+
+
+    document.getElementById("registration-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+
+      const formData = {
+        name: document.getElementById("username").value,
+        gender: document.getElementById("gender").value,
+        email: document.getElementById("email").value,
+        phoneNumber: document.getElementById("phone-number").value,
+        birthDate: document.getElementById("birth-date").value,
+        diseaseDescription: document.getElementById("discription").value
+      };
+
+      push(ref(database, 'patients'), formData)
+        .then(() => {
+          console.log('Data successfully submitted to Firebase');
+          window.location.href = 'registration.html';
+        })
+        .catch((error) => {
+          console.error('Error submitting data to Firebase: ', error);
+          displayErrorMessage(error.message);
+
+        });
+    });
+
+    function displayErrorMessage(errorMessage) {
+      const toast = new bootstrap.Toast(document.querySelector('.toast'));
+      document.getElementById('errorMessage').innerText = errorMessage;
+      toast.show();
+    }
+  </script>
+
 </body>
+
 </html>

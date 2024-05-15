@@ -51,11 +51,14 @@ h2{
 	border-radius: 20px;
     margin-bottom: 25px;
     padding: 10px 20px;
+    box-shadow: none;
 }
 .gender{
   border-radius: 20px;
-    margin-bottom: 10px;
+    margin-bottom:  0px;
     padding: 10px 20px;
+    box-shadow: none;
+    
 }
 .create-account{
     border-radius: 30px;
@@ -66,6 +69,12 @@ h2{
     border: none;
     color: white;
     margin-top: 20px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .social-media{
@@ -103,4 +112,16 @@ h2{
 .social-icons a:hover{
     text-decoration: none;
     opacity: 0.6;
+}
+
+#discription{
+  resize: none; 
+}
+
+
+.form-group .item{
+  box-shadow: none;
+}
+#gender{
+  box-shadow: none;
 }
