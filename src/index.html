@@ -80,6 +80,7 @@
       </div>
 
       <div class="form-group ">
+        <input type="hidden" id="submission-date" name="submissionDate">
         <button type="submit" class="btn btn-block create-account" id="submit">SUBMIT</button>
       </div>
     </form>
@@ -112,56 +113,60 @@
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
-    import { getDatabase, ref, push, child, get } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
+    import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
 
     const firebaseConfig = {
-      apiKey: "AIzaSyB-Fp38c9GUdO6AekTpdKhwtd6IHg6v-Ns",
-      authDomain: "patient-detail-cb679.firebaseapp.com",
-      databaseURL: "https://patient-detail-cb679-default-rtdb.firebaseio.com",
-      projectId: "patient-detail-cb679",
-      storageBucket: "patient-detail-cb679.appspot.com",
-      messagingSenderId: "429925058854",
-      appId: "1:429925058854:web:03af403cf4a869825559e7",
-      measurementId: "G-LLKGNSZ2H5"
+        apiKey: "AIzaSyB-Fp38c9GUdO6AekTpdKhwtd6IHg6v-Ns",
+        authDomain: "patient-detail-cb679.firebaseapp.com",
+        databaseURL: "https://patient-detail-cb679-default-rtdb.firebaseio.com",
+        projectId: "patient-detail-cb679",
+        storageBucket: "patient-detail-cb679.appspot.com",
+        messagingSenderId: "429925058854",
+        appId: "1:429925058854:web:03af403cf4a869825559e7",
+        measurementId: "G-LLKGNSZ2H5"
     };
-
 
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
     const database = getDatabase(app);
 
-
     document.getElementById("registration-form").addEventListener("submit", function (event) {
-      event.preventDefault();
+        event.preventDefault();
 
+        // Get the current date
+        const currentDate = new Date().toISOString().split('T')[0];
 
-      const formData = {
-        name: document.getElementById("username").value,
-        gender: document.getElementById("gender").value,
-        email: document.getElementById("email").value,
-        phoneNumber: document.getElementById("phone-number").value,
-        birthDate: document.getElementById("birth-date").value,
-        diseaseDescription: document.getElementById("discription").value
-      };
+        // Get form data
+        const formData = {
+            name: document.getElementById("username").value,
+            gender: document.getElementById("gender").value,
+            email: document.getElementById("email").value,
+            phoneNumber: document.getElementById("phone-number").value,
+            birthDate: document.getElementById("birth-date").value,
+            diseaseDescription: document.getElementById("discription").value,
+            // Include the submission date in the form data
+            submissionDate: currentDate
+        };
 
-      push(ref(database, 'patients'), formData)
-        .then(() => {
-          console.log('Data successfully submitted to Firebase');
-          window.location.href = 'registration.html';
-        })
-        .catch((error) => {
-          console.error('Error submitting data to Firebase: ', error);
-          displayErrorMessage(error.message);
-
-        });
+        // Push form data to Firebase
+        push(ref(database, 'patients'), formData)
+            .then(() => {
+                console.log('Data successfully submitted to Firebase');
+                window.location.href = 'registration.html'; // Redirect to another page if needed
+            })
+            .catch((error) => {
+                console.error('Error submitting data to Firebase: ', error);
+                displayErrorMessage(error.message);
+            });
     });
 
     function displayErrorMessage(errorMessage) {
-      const toast = new bootstrap.Toast(document.querySelector('.toast'));
-      document.getElementById('errorMessage').innerText = errorMessage;
-      toast.show();
+        const toast = new bootstrap.Toast(document.querySelector('.toast'));
+        document.getElementById('errorMessage').innerText = errorMessage;
+        toast.show();
     }
-  </script>
+</script>
+
 
 </body>
 

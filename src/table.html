@@ -98,7 +98,7 @@
                     <td>${patientData.birthDate}</td>
                     <td>${patientData.diseaseDescription}</td>
                 `;
-                patientTable.appendChild(row);
+                patientTable.insertBefore(row, patientTable.firstChild);
             });
             spinner.style.display = 'none';
             mainHeading.style.display = 'block';
