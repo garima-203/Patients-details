@@ -1,2 +1,2 @@
 # Patient-details
- List of patients 
+ Patients detail page using html,css,js,firebase
